@@ -32,13 +32,20 @@
 // //     });
 // //   }
 
-//   $(window).scroll(function () {
-//     if ($(document).scrollTop() >= 50) {
-//       $(".header-menu").addClass("navbar-fixed");
-//     } else {
-//       $(".header-menu").removeClass("navbar-fixed");
-//     }
-//   });
+var height = $(".main-wrapper-left").height();
+  $(window).scroll(function () {
+    if ($(document).scrollTop() >= 150) {
+      $(".main-right-inner-position").addClass("right-section-fixed");
+      console.log(height - 500);
+    }else{
+        $(".main-right-inner-position").removeClass("right-section-fixed");
+    }
+    if($(document).scrollTop() >= 1760){
+        $(".main-right-inner-position").removeClass("right-section-fixed");
+    }
+
+  });
+
 
 //   // Check Width
 // //   function checkWidth() {

@@ -415,16 +415,18 @@ body {
 }
 
 .main-wrapper {
-  margin-top: 100px;
-  margin-bottom: 80px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+@media (min-width: 1200px) {
+  .main-wrapper .container {
+    max-width: 1366px;
+  }
 }
 .main-wrapper .main-wrapper-inner {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.main-wrapper .main-wrapper-inner .main-wrapper-left {
-  width: 55%;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-column-gap: 50px;
 }
 .main-wrapper .main-wrapper-inner .main-wrapper-left .image-gallery-wrapper {
   display: grid;
@@ -479,7 +481,7 @@ body {
   visibility: visible;
 }
 .main-wrapper .main-wrapper-inner .main-wrapper-right {
-  width: 42%;
+  position: relative;
 }
 .main-wrapper .main-wrapper-inner .main-wrapper-right .top-header {
   color: #33BD43;
@@ -498,19 +500,20 @@ body {
   font-weight: 400;
 }
 .main-wrapper .main-wrapper-inner .main-wrapper-right .link-wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 44% 28% 28%;
+  grid-column-gap: 5px;
 }
 .main-wrapper .main-wrapper-inner .main-wrapper-right .link-wrapper a {
   color: #fff;
   background-color: #919191;
   font-size: 15px;
   text-align: center;
-  padding: 15px 35px;
+  padding: 18px 0;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
 }
-.main-wrapper .main-wrapper-inner .main-wrapper-right .link-wrapper .middle-link {
+.main-wrapper .main-wrapper-inner .main-wrapper-right .link-wrapper a:hover {
   background-color: #33BD43;
 }
 .main-wrapper .main-wrapper-inner .main-wrapper-right .right-image-wrapper {
@@ -537,6 +540,11 @@ body {
   text-align: center;
   background-color: #919191;
   padding: 12px 0;
+  transition: 0.3s ease-in-out;
+  text-decoration: none;
+}
+.main-wrapper .main-wrapper-inner .main-wrapper-right .species-wrapper a:hover {
+  background-color: #33BD43;
 }
 .main-wrapper .main-wrapper-inner .main-wrapper-right .species-detail-wrapper {
   border: 1px solid #919191;
@@ -573,6 +581,17 @@ body {
   margin-bottom: 0;
   color: #919191;
   font-weight: 300;
+}
+
+.main-right-inner-position {
+  transition: 0.5s linear;
+}
+
+.right-section-fixed {
+  transition: 0.5s linear;
+  position: fixed;
+  top: 70px;
+  background-color: #fff !important;
 }
 
 footer {

@@ -438,14 +438,22 @@ background: linear-gradient(90deg, rgba(78,77,89,1) 55%, rgba(89,87,103,1) 70%, 
 
 // Home 
 .main-wrapper{
-    margin-top: 100px;
-    margin-bottom: 80px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    .container{
+        @media(min-width: 1200px){
+            max-width: 1366px;
+        }
+    }
     .main-wrapper-inner{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        // display: flex;
+        // flex-direction: row;
+        // justify-content: space-between;
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-column-gap: 50px;
         .main-wrapper-left{
-            width: 55%;
+            // width: 55%;
             .image-gallery-wrapper{
                display: grid;
                grid-template-columns: 1fr 1fr;
@@ -517,7 +525,8 @@ background: linear-gradient(90deg, rgba(78,77,89,1) 55%, rgba(89,87,103,1) 70%, 
             }
         }
         .main-wrapper-right{
-            width: 42%;
+            // width: 42%;
+            position: relative;
             .top-header{
                 color: #33BD43;
                 font-weight: 300 !important;
@@ -535,10 +544,13 @@ background: linear-gradient(90deg, rgba(78,77,89,1) 55%, rgba(89,87,103,1) 70%, 
                 }
             }
             .link-wrapper{
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
+                // display: flex;
+                // flex-direction: row;
+                // justify-content: space-between;
+                // align-items: center;
+                display: grid;
+                grid-template-columns: 44% 28% 28%;
+                grid-column-gap: 5px;
                 a{
                     color: #fff;
                     background-color: #919191;
@@ -546,11 +558,19 @@ background: linear-gradient(90deg, rgba(78,77,89,1) 55%, rgba(89,87,103,1) 70%, 
                     // width: 100%;
                     font-size: 15px;
                     text-align: center;
-                    padding: 15px 35px;
+                    padding: 18px 0;
+                    text-decoration: none;
+                    transition: 0.3s ease-in-out;
+                    &:hover{
+                        background-color: #33BD43;
+                    }
                 }
-                .middle-link{
-                    background-color: #33BD43;
-                }
+                // .middle-link{
+                //     background-color: #33BD43;
+                //     &:hover{
+                //         background-color: #919191;
+                //     }
+                // }
             }
             .right-image-wrapper{
                 margin-top: 50px;
@@ -575,6 +595,11 @@ background: linear-gradient(90deg, rgba(78,77,89,1) 55%, rgba(89,87,103,1) 70%, 
                     text-align: center;
                     background-color: #919191;
                     padding: 12px 0;
+                    transition: 0.3s ease-in-out;
+                    text-decoration: none;
+                    &:hover{
+                        background-color: #33BD43;
+                    }
                 }
             }
             .species-detail-wrapper{
@@ -623,8 +648,15 @@ background: linear-gradient(90deg, rgba(78,77,89,1) 55%, rgba(89,87,103,1) 70%, 
 
 
 
-
-
+.main-right-inner-position{
+    transition: 0.5s linear;
+}
+.right-section-fixed{
+    transition: 0.5s linear;
+    position: fixed;
+    top: 70px;
+    background-color: #fff !important;
+}
 
 
 
